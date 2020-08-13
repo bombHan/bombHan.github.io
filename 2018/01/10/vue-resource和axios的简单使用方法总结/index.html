@@ -15,14 +15,14 @@
 <meta property="og:site_name" content="Han Blog">
 <meta property="og:description" content="内容为vue-resource和axios的基础学习">
 <meta property="og:locale">
-<meta property="og:image" content="https://runuowbd123.github.io/homework/vue-resource.png">
-<meta property="og:image" content="https://runuowbd123.github.io/homework/vue-resource2.png">
+<meta property="og:image" content="https://bombhan.github.io/homework/vue-resource.png">
+<meta property="og:image" content="https://bombhan.github.io/homework/vue-resource2.png">
 <meta property="article:published_time" content="2018-01-10T09:15:00.000Z">
-<meta property="article:modified_time" content="2018-01-10T09:15:00.000Z">
+<meta property="article:modified_time" content="2020-08-13T06:07:03.166Z">
 <meta property="article:author" content="Han">
 <meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://runuowbd123.github.io/homework/vue-resource.png">
+<meta name="twitter:image" content="https://bombhan.github.io/homework/vue-resource.png">
   
     <link rel="alternative" href="/atom.xml" title="Han Blog" type="application/atom+xml">
   
@@ -200,13 +200,13 @@
 <p>vue-resource的请求API是按照REST风格设计的，它提供了7种请求API：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">get(url, [options])</span><br><span class="line">head(url, [options])</span><br><span class="line"><span class="keyword">delete</span>(url, [options])</span><br><span class="line">jsonp(url, [options])</span><br><span class="line">post(url, [body], [options])</span><br><span class="line">put(url, [body], [options])</span><br><span class="line">patch(url, [body], [options])</span><br></pre></td></tr></table></figure>
 <p>除了jsonp以外，另外6种的API名称是标准的HTTP方法。当服务端使用REST API时，客户端的编码风格和服务端的编码风格近乎一致，这可以减少前端和后端开发人员的沟通成本。</p>
-<p><img src="https://runuowbd123.github.io/homework/vue-resource.png" alt="image"></p>
+<p><img src="https://bombhan.github.io/homework/vue-resource.png" alt="image"></p>
 <p>emulateHTTP的作用</p>
 <p>如果Web服务器无法处理PUT, PATCH和DELETE这种REST风格的请求，你可以启用enulateHTTP现象。启用该选项后，请求会以普通的POST方法发出，并且HTTP头信息的X-HTTP-Method-Override属性会设置为实际的HTTP方法。<br>Vue.http.options.emulateHTTP = true;</p>
 <p>emulateJSON的作用</p>
 <p>如果Web服务器无法处理编码为application/json的请求，你可以启用emulateJSON选项。启用该选项后，请求会以application/x-www-form-urlencoded作为MIME type，就像普通的HTML表单一样。<br>Vue.http.options.emulateJSON = true;</p>
 <p><strong>response对象</strong><br>response对象包含以下属性：</p>
-<p><img src="https://runuowbd123.github.io/homework/vue-resource2.png" alt="image"></p>
+<p><img src="https://bombhan.github.io/homework/vue-resource2.png" alt="image"></p>
 <p><strong>实例如下：</strong> (以下实例来自于<a target="_blank" rel="noopener" href="http://www.cnblogs.com/Juphy/p/7073027.html">Juphy的博客实例</a>)</p>
 <p>1、GET请求</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    gridColumns: [<span class="string">&#x27;customerId&#x27;</span>, <span class="string">&#x27;companyName&#x27;</span>, <span class="string">&#x27;contactName&#x27;</span>, <span class="string">&#x27;phone&#x27;</span>],</span><br><span class="line">    gridData: [],</span><br><span class="line">    apiUrl: <span class="string">&#x27;http://211.149.193.19:8080/api/customers&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ready: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.getCustomers()</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    getCustomers: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">this</span>.$http.get(<span class="built_in">this</span>.apiUrl)</span><br><span class="line">        .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">this</span>.$set(<span class="string">&#x27;gridData&#x27;</span>, response.data)</span><br><span class="line">        &#125;,<span class="function">(<span class="params">response</span>)=&gt;</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(response)</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(response)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>

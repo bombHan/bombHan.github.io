@@ -21,11 +21,11 @@
 <meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png">
 <meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071013.png">
 <meta property="og:image" content="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071015.jpg">
-<meta property="og:image" content="https://github.com/runuowbd123/homework/blob/master/demo1.jpg?raw=true">
-<meta property="og:image" content="https://github.com/runuowbd123/homework/blob/master/demo2.jpg?raw=true">
-<meta property="og:image" content="https://github.com/runuowbd123/reacthooksDemo/blob/master/public/img/1.jpg?raw=true">
+<meta property="og:image" content="https://github.com/bombHan/homework/blob/master/demo1.jpg?raw=true">
+<meta property="og:image" content="https://github.com/bombHan/homework/blob/master/demo2.jpg?raw=true">
+<meta property="og:image" content="https://github.com/bombHan/reacthooksDemo/blob/master/public/img/1.jpg?raw=true">
 <meta property="article:published_time" content="2019-06-26T13:20:14.000Z">
-<meta property="article:modified_time" content="2019-06-26T13:20:14.000Z">
+<meta property="article:modified_time" content="2020-08-13T06:07:03.096Z">
 <meta property="article:author" content="Han">
 <meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
@@ -222,21 +222,21 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex</span>: none | [ &lt;<span class="string">&#x27;flex-grow&#x27;</span>&gt; &lt;<span class="string">&#x27;flex-shrink&#x27;</span>&gt;? || &lt;<span class="string">&#x27;flex-basis&#x27;</span>&gt; ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>我们平时会经常使用flex:1种方法特别多，大概可以理解成是这个模块自适应剩下的空间，</strong></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">flex</span>: 1 (1 1 0%)</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://github.com/runuowbd123/reacthooksDemo/blob/master/src/views/flexBugDemo.tsx">代码Demo链接</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bombHan/reacthooksDemo/blob/master/src/views/flexBugDemo.tsx">代码Demo链接</a></p>
 <h1 id="2-display-contents"><a href="#2-display-contents" class="headerlink" title="2. display: contents"></a>2. display: contents</h1><p>在CSS3可视化模块中，display: contents是display属性一个新的属性值。chrome,FireFox等浏览器已经实现了对该属性的支持</p>
 <h3 id="设置属性，成为消失的盒模型"><a href="#设置属性，成为消失的盒模型" class="headerlink" title="设置属性，成为消失的盒模型"></a>设置属性，成为消失的盒模型</h3><p>可以在文档中添加一个HTML元素，并在该元素的选择器中添加display:contents样式，那么该元素就会像是不存在一样，它的子元素会替代它在Dom树中的位置。</p>
 <h3 id="使用-display-contents-来实现Flex项目的“继承”"><a href="#使用-display-contents-来实现Flex项目的“继承”" class="headerlink" title="使用 display:contents 来实现Flex项目的“继承”"></a>使用 display:contents 来实现Flex项目的“继承”</h3><p>在使用弹性布局的时候，我们都知道只有Flex容器的直接子元素可以成为Flex项目。而Flex项目的子元素是不能够使用父元素的规则来进行布局的，如果Flex项目的子元素也要使用flex布局，那么要给着个Flex项目也设置flex属性。但是现在有了display: contents就不需要了，他可以设置在这个Flex项目上就可以实现了。</p>
 <p>例如:<br>现在有一个flex的大盒子里放着box1，box2，box3，且box2其实是个语义化标签并没什么实际作用里面有box5，box6。布局时会如下显示：</p>
-<p><img src="https://github.com/runuowbd123/homework/blob/master/demo1.jpg?raw=true" alt="image"></p>
+<p><img src="https://github.com/bombHan/homework/blob/master/demo1.jpg?raw=true" alt="image"></p>
 <p>实际有时候box2可能是个section标签可能只有语义化的含义其他没作用，这时候我们要使box5，box6也跟box1和box3一样成为Flex项那我们其实可以在box2上设置一个display: ‘contents’属性，这样box2在DOM树中相当于是消失了，且box2中的box5，box6会变成Flex项。这样做，将会在语义化以及显示效果上都能得到很好地效果。</p>
-<p><img src="https://github.com/runuowbd123/homework/blob/master/demo2.jpg?raw=true" alt="image"></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/runuowbd123/reacthooksDemo/blob/master/src/views/displayContentDemo.tsx">代码链接</a></p>
+<p><img src="https://github.com/bombHan/homework/blob/master/demo2.jpg?raw=true" alt="image"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/bombHan/reacthooksDemo/blob/master/src/views/displayContentDemo.tsx">代码链接</a></p>
 <h1 id="3-filter-drop-shadow-color-0px-0px"><a href="#3-filter-drop-shadow-color-0px-0px" class="headerlink" title="3.filter: drop-shadow(color 0px 0px)"></a>3.filter: drop-shadow(color 0px 0px)</h1><p>这是css3的一个新属性，叫滤镜属性。我给大家介绍的是里面一个比较实用的属性drop-shadow，主要可以用于svg的颜色变化。其实它就是复制一份相同的但是颜色不同的svg然后通过定位改变的方法来改变颜色。下面有示例demo：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;img</span><br><span class="line">    alt=<span class="string">&quot;logo&quot;</span></span><br><span class="line">    src=&#123;<span class="string">`/public/img/logo.svg`</span>&#125;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: .<span class="number">1rem</span>;</span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">drop-shadow</span>(#<span class="number">1890</span>ff <span class="number">30px</span> <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://github.com/runuowbd123/reacthooksDemo/blob/master/public/img/1.jpg?raw=true" alt="image"></p>
+<p><img src="https://github.com/bombHan/reacthooksDemo/blob/master/public/img/1.jpg?raw=true" alt="image"></p>
 
       
 
