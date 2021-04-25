@@ -304,85 +304,6 @@
 
 
   
-    <article id="post-nuxt的入门使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/19/nuxt%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/">nuxt的入门使用</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/19/nuxt%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-07-19T05:13:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="data:image/jpeg;base64,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" alt="image"></p>
-<ul>
-<li>nuxt与next相似，但是nuxt是基于vue的，它为 客户端/服务端 这种典型的应用架构模式提供了许多有用的特性，例如异步数据加载、中间件支持、布局支持等。其实他的使用与vue基本相同，但是也有些不同和新增之处，下面是我自己学习时觉得需要常用的和基础来进行介绍，<a target="_blank" rel="noopener" href="https://github.com/bombHan/hello-nuxt">demo也有已经上传到我的github中了</a>，欢迎下载学习！过程中如果遇到不懂的或者不详细的可以参考<a target="_blank" rel="noopener" href="https://zh.nuxtjs.org/guide/installation">官网</a>解释。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2020/07/19/nuxt%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/19/nuxt%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-vue用脚手架创建项目之vue create 和 vue init区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -529,32 +450,32 @@
 
 
   
-    <article id="post-css之天气预报" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-nuxt的入门使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/13/css%E4%B9%8B%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/">css 之 天气预报</a>
+      <a class="article-title" href="/2020/07/19/nuxt%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/">nuxt的入门使用</a>
     </h1>
   
 
         
-        <a href="/2019/10/13/css%E4%B9%8B%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/" class="archive-article-date">
-  	<time datetime="2019-10-13T07:44:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+        <a href="/2020/07/19/nuxt%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-07-19T05:13:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://github.com/bombHan/homework/blob/master/weatherDemo/weather.gif?raw=true" alt="image"></p>
+        <p><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAEuAfQDAREAAhEBAxEB/8QAHAABAAICAwEAAAAAAAAAAAAAAAUGBAcBAgMI/8QAOhABAAIBAgIHBQUHBQEBAAAAAAECAwQRBTEGEiEiQVFxFDJhgdETQlKRwQcVI1RigpMWU6Gx4TOS/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAMFAQIEBv/EACcRAQACAgIDAAIBBQEBAAAAAAABAgMRBBITMUEhUQVCUoGRsUNh/9oADAMBAAIRAxEAPwCFRvOAAAAAAAAAAAAAAAAAAERMzERG8zyiA2kdNwq99rZ5mlfwx70/RhDbLr0lsWLHhp1MdIrX4MbQTMz7dgGQAAAAAAAAAAAAAAAAAAAAAAAAABX9fqfaNTMxPcr3a/VZ4cfSn/1c8bF46fn3LFTOgAAAAAAAAAAByp1WAAAAAAAAAAAAAAAAAy9Nw/NqNrbdTH+K3j6QwjtkiqY0+jw6aO5XveNp5ybQWvNnsNQAAAAAAAAAAAAAAAAAAAAAAAAAAAGFxPUfY6bqVna+Tsj4R4yn4+Ptbc+odXExd77n1CCWS3AAAAAAAAAAAAcqdVgAAAAAAAAAAAAAAPbBpsuottjpvHjaeyI+Y1taK+0vpuG4sG1r7ZL+cx2R6QxtBbJM/iGYIwAAAAAAAAAAAAAAAAAAAAAAAAAAAACZiImZnaI5yCuazUe06m2T7vKvotMVOldLvBi8dIr9eCVMAAAAAAAAAAAA5U6rAAAAAAAAAAAAAdqY75bxSlZtaeURAxMxHtKabhMRtbUTvP4K8vnLCG2X9JKta1rFaxEVjlERyEMzLkYBkAAAAAAAAAAAAAAAAAAAAAAAAAAAABH8V1P2eD7Gs97Jz+EOnjY+1u0/HZw8Xa/efUf9QqwWoAAAAAAAAAAAADlTqsAAAAAAAAAAABIabheTJtbNvjr5fen6MIrZYj0lsOHFgp1cVIrHj5z6iCZmfbuwwMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi1opWbWnaIjeZIiZnUMxEzOoVvU551Ge2WezflHlHgtsdIpWKrzFjjHSKw8m6QAAAAAAAAAAAAByp1WAAAAAAAAAAydNoc2p2mI6tPx25fLzGlskVTGm0WHTdtY61/x25/+MOe15syd2GrhkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARvFtR1KRgrPbbtt6Ovi49z3l3cLFufJPxDu5ZgAAAAAAAAAAAAAOVOqwAAAAAAAHrh0+XUX6uKk2858I9ZGtrRX2ltNwvFi2tl2yX8vux9WEFssz6ZwiBkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB1yXrix2vedq1jeWa1m06hmtZtMVhWs2W2bLbJbnad/RbUrFY6wvaUilYrHx0bNwAAAAAAAAAAAAAHKnVYAAAAADmtbXtFaVm1p5REdshM6Smm4TytqJ/srP/AHLCC2X9JOlK46RSlYrWOURDCGZ37csgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK4tqPd09Z/qv+kOzi4/65WHCxe8k/4RTtWIAAAAAAAAAAAAAADlTqsAAAABnabhmXNtbJvjp8Y7Z+TCK2WI9JfBpsWnr1cdIjfnPjPzY2gtabe3oywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6ZstcGG2W3Ksb+ralZvaKw3x0m9orH1Wsl7Zclr2ne1p3la1rFY1C8rWKxFY+OrZsAAAAAAAAAAAAAAA5U6rAAAZGn0WbUzvSu1Px25f+sNLXiqX0ugw6bt269/xW/SPAQWyTLKGgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH4tqetkjBWeyvbb1d3Fx6jvKy4WLUeSfqNdbvAAAAAAAAAAAAAAAAcqdVgPTFhyZ79THSbT8PAYm0R7Sum4Vjx7WzzGS34Y92PqxtBbLM+khG0RtHJhEAMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADy1OeNPp75Z5xHZHnPg3x072iqTFjnJeKq3a03tNrTvaZ3mfNaxERGoXkRERqHDLIAAAAAAAAAAAAAAADtETa0VrEzM8oiOanVczpI6bhNrbW1E9WPwRPb82ENsv6SuPHTFSKY6xWseECCZmfbswDIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAheK6j7TPGKs93Hz+Mu/jY+te0/Vrw8XWnafc/wDEe6nYAAAAAAAAAAAAAAAAAsmn0uHTRtjr2+Np7ZlTPP2tNvb2YYGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4azURptPa/3p7Kx8UmLH3tpNgxeS8V+K5zneea0XYyAAAAAAAAAAAAAAAAALUpnngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEFxLU/b6jq1nuY+yPjPjKx4+PrXc+5W/ExdKbn3LCdDqAAAAAAAAAAAAAAAAAAWpTPPAAAAAAAAAAAAAAAAAAAAAAAO9MOXLEzjxZLxHjWkz/0abRS1vzEO/smp/ls/wDit9DUs+LJ/bP+j2TU/wAtn/xW+hqTxZP7Z/0xrZsVLTW2XHW1Z2mtrxExPlMM9Z/R47/qXHtGD/fxf5I+p1t+jx3/AFLmubFe3Vrlx2nyreJkmJhiaWj8zDuw1AcTMViZmYiI5zIRG3T2jB/v4v8AJH1Z6z+m/jv+j2jB/v4v8kfU6z+jx3/T1w1tqImcFbZorO0zjjr7euxqTx3/AFL19l1P8tn/AMVvoak8V/7Z/wBOPZdT/LZ/8Vvoak8WT+2f9PO1Zraa2iYmOcTG0ww1mJidS4GAAGLr9T7Nppms9+3dr9UuDH3t+fSfjYvJfU+oV9aLoAAAAAAAAAAAAAAAAAABalM88AAAAAAAAAAAAAAAAAAAAAAAnuifGf3VxWMeW22m1G1L7z2Vt9236fP4Nqy7uByPFk6z6ltHb1bvRG3qDSX7XeisaHidOP6XFHs+rt1NTER7uXbst/dEfnHxT4rfEWSPrWe0eUfklRPTT5r6XUY8+HauSk7x9GLR2jUtL0i9ZrLYGk1OPWaXHqMXu3jfbynxj5OC1es6l5/JScdprL2YaK70n4h1cddBjntttbL6eEfPm6MFP6pWPAw7nyT/AIVfq1/DH5Opau+LBfUZseHDi+0y5LRSlKx22tM7RH5sb0y+mOh3RvF0X6OafQVis55/iajJWPfyTz+Uco+EOW1u07dFY1Gk/s1ZRfH+LV4NwrJqN4nLPcxVnxvPL5Rz+TEzpByc0Ycc2akve2S9r3tNr2mZtaZ7Zmeco3l5mbTuXAwAAr+v1PtGpnae5Xu1+qzwY+lP/srnjYvHT8+5YqZ0AAAAAAAAAAAAAAAAAAALUpnngAAAAAAAAAAAAAAAAAAAAAAAGzuiHGf3nwuMOa2+p021L787V+7b9PWEkTt6Pg8jy49T7hYmXaweM8K03G+Earhurrvh1FJpbzrPhMfGJ2mPRmJ1O2Jjb5g4twvU8F4tqeG6uu2fT3mlp27LR4Wj4TG0/N1xO4255jU6YYwnejXEPsNVOjyT/DzTvTfwv/79EGam47K/nYe1e8e4WXWarHotJk1GT3aRvt5z4R83PWvadKzFjnJaKwoGfNfU58mbLO972m1pd9YiI1D0FKRSsVh0G7Z/7Iei3tmvv0h1VN8OmmceliY97J9639sTt6zPkiy2+JcdfrdSBKA1Z0q4x+9uK2rjtvptPvTH5Wnxt8/+oaWl53n8jy5NR6hBNXCAAw+Jaj7DTTWs7XydkfCPGU/Hx9rbn1Dp4mLvfc+oQKyXAAAAAAAAAAAAAAAAAAAAC1KZ54AAAAAAAAAAAAAAAAAAAAAAABn8G4pfhHFMWrrvNI7uSsfepPOP1+TMTp0cbPOHJFvn1t7DlpmxUy47Ral6xato5TE8pSPTxMTG4dxlq/8Aa90W9r4fTpBpce+fSx1NTFY7bYt+y39sz+Uz5JcVtTpHkrv8tLJ0JvMTExMxMdsTHgExv8SkuJ8YycSw6fHaOrFK73/qvy39Nv8AuUdMcVmZcvH40YrTMI1I6mdwbhOp45xjS8M0kb5tRfq77bxSPG0/CI3liZ1G2Yjc6fT3CeGabg3C9Nw7R06mn0+OKUjz85n4zPbPq5Znc7l0RGoZrDKtdMeM/u7hns2G+2p1MTWNudafen9I9WJnTh5/I8WPUe5a05I3nQACZiI3mdogFc1mo9p1Nrx7vKvotMVOldLvBi8dIr9eCVMAAAAAAAAAAAAAAAAAAAAtSmeeAAAAAAAAAAAAAAAAAAAAAAAAAXvoLxjr4rcKzW71Im+CZ8a+Nflz9J+Desrv+N5Havit89Lq2WrplxUz4b4stK3x3rNbVtG8WieyYkHzR0x6N5Oi3SPPoNpnTW/i6a8/exzPZHrHKfT4uqlu0Oe0alANmoADdv7I+i3sHDL8d1VNtRra9XBEx20w+f8AdPb6RCDLbc6TY66jbZiJI88+bHp8F82W0Vx46za1p8IgYtMVjctQ8Y4lk4txPLrL7xFuzHSfu0jlH6+so7Tt5fk55zZJtPpgsIAAGBxTUfZYPsqz3snP4Q6eNj7W7T8dnDxdr959QhFgtQAAAAAAAAAAAAAAAAAAAAFqUzzwAAAAAAAAAAAAAAAAAAAAAAAAD20upy6PV4tTgt1cuK0WrPx+ngRLfHktjvF6/G3+Ga/FxPh+HV4fdyV328az4xPpKV6nFkjJSLx9ZYkU39o/RX/UnR219PTfiGj3y4No7bxt3qfOP+YhvS3WWl67h88eDpQALD0K6NW6U9JMOitE+yY/4uqtHhjieXraez8/Jre3WG1a7l9K48dMWOuPHWKUrEVrWsbRERyiHK6HcFJ6dcY6ta8Kw27bRF88x5eFfnz/AC82tpVP8lyNR4q/faitFKAA4taK1m1p2iI3mSI3OoZiJmdQrepzzqc9ss+PKPKFrjpFK9V5ixxjpFXkkSAAAAAAAAAAAAAAAAAAAAALUpnngAAAAAAAAAAAAAAAAAAAAAAAAAFq6E8Z9j186DNfbDqZ7m/KuT/3l6xDas/Fn/G8jpbxW9T/ANbGbr0B8/8A7UOi/wC4ukM67TY+roNfM3rtHZTLztX4b+9HrPk6MdtxpBeup2o3ymfhCVo+iv2d9Fv9NdHKRnx9XX6vbNqfOs7d2n9sf8zLlvbtKeldQt7RuwuKcRxcL4dm1eb3ccdlfxW8I+ciPNljFSbz8ah1Goy6vU5dRmt1suW02tPxlFMvLZLzktNp9y8hoAAjeLajqY4wVntv229HVxce57z8d3Cxbt3n4h3eswAAAAAAAAAAAAAAAAAAAAAFqUzzwAAAAAAAAAAAAAAAAAAAAAAAAADmJmJiYmYmO2JjwDevzDa/RvjEcY4VTLaY9ox9zNH9UePz5pInb0/Ez+bHFvv1MMulC9Kuj+HpN0f1PDcsxW9462HJMf8AzyR7tvr8Jlms6nbFo3Gmov2bdDc+u6VZtRxHB1MPCcvVyY7R72eOVfSPe/8Az5psl/x+EVK/n8t7oEwDW/TTjPt3EfYcVt8GmnvbcrZPH8uX5tLSof5Hkd7+OPUf9VdqrQAHW9646Wvedq1jeWYibTqGa1m0xWPat5sts+a2W3O07+i1pWK1isL3HSKVisfHm3bgAAAAAAAAAAAAAAAAAAAAALUpnngAAAAAAAAAAAAAAAAAAAAAAAAAAEx0a4xPB+LUyXttpsv8PNHlHhb5T/xuzWXZwuR4cn59S2vExMRMTExPkkekcg61x0pNprWIm07ztHOfMHYEL0n4xHB+E3vSY9py9zDHx8Z+Udv5MTOnLy8/hxzP341TzneZmZnxnxRvM7mfzIAACK4vqeyunrP9V/0h2cXH/XKw4WL/ANJ/winasQAAAAAAAAAAAAAAAAAAAAAAFqUzzwAAAAAAAAAAAAAAAAAAAAAAAAAAADY/QrjPtvD50Oa2+fTREVmedsfhPy5fkkrO3oP4/keTH1n3C0srABxa0VrMzMREc5kGpukfF54zxa+atpnT4+5hj+nz+c9v5I5nbzXN5Hmybj1HpEsOQAB0zZa4MNsl/drG/q2pWbWisNqUm9orH1WsmS2XJbJad7WneVrWsVjUL2lYrWKx8dWzYAAAAAAAAAAAAAAAAAAAAAABalM88AAAAAAAAAAAAAAAAAAAAAAAAAAAAy+GcQy8L4jh1mLeZxz3q/ir4x82YnSbBmnDki8Nv6XU4tXpcWow262PJWLVn4SkeoraLxFo9S9hsqnTbjPsehjh+G22fUx35jnXH4/ny/NraVd/I8jx06V9z/xrpo8+DIACI4tqeteNPWeyvbb18ndxceo7ysuFi1Hkn6jHW7wAAAAAAAAAAAAAAAAAAAAAAAFqUzzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAC69BeM9S9+FZrdlt74N/P71f1/NvWVx/Gcj/AMbf4XXV6rFotJl1Oe3VxYqza0/Bstr3ilZtPqGn+I6/LxPiGbWZveyW3iv4Y8I+UI5nby2fLObJN5YrCIAB5ajNGn098s+Edkec+DfHTvaKpMWOcl4rCt2ta9ptad7TO8ytYiIjULyIiI1DhlkAAAAAAAAAAAAAAAAAAAAAAABalM88AAAAAAAAAAAAAAAAAAAAAAAAAAAAA74cuTBmx5sVprkx2i1LR4THIbUtNLRavuFk6SdJ44voNLpsETSs1jJqI/r8K+kc/wAm0ysOZzIy0rSv32rDVWgAAIXiuo+0zxirPdx8/jLv42PrXtP1acPF1r3n3P8AxHup2gAAAAAAAAAAAAAAAAAAAAAAAALUpnngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHhq9RGm09sn3uVY85SYsfe2kuHF5LxVXJmZneZ3nzWi8GQAAAAAAAAAAAAAAAAAAAAAAAABalM88AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAguJ6n7fUdSs9zH2R8Z8ZWPHx9a7n3K24mLpTc+5YTodYAAAAAAAAAAAAAAAAAAAAAAAAAC1KZ54AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABja7U+zaabRPft3a/VLhx976n0n4+LyX1PqFeWi6AAAAAAAAAAAAAAAAAAAAAAAAAAAWpTPPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK/wAQ1PtGpnae5Tu1/WVlgx9Kfn3K542Lx0/PuWKndAAAAAAAAAAAAAAAAAAAAAAAAAAAC1KZ54AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABh8S1H2GlmtZ2vk7senjKfj4+19z6h08XF3ybn1CBWS4AAAAAAAAAAAAAAAAAAAAAAAAAAAAWpTPPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHLnyBXdbqPadTa8e7HZX0WmLH0rpd4MXjpFfrHSpgAAAAAAAAAAAAAAAAAAAAAAAAAAAFqUzzwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA4pqfssH2VZ72T/iHTxsfa3afjr4eLvftPqEIsFsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtSmeeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcTMVrNrTtERvMkRv8AEERMzqFc1OedTqLZJ5T2VjyjwWuOkUrFV5hxxjpFYeKRKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtSmeeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR3FtR1MUYKz237bejq4uPc9p+O3hYu1u8/EM71oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtSmeeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdb3rjpa952rWN5lmImZ1DNazadQrefNbPmtltztPLy+C1pWKVisL3HSKVisPNu3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWpTPPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIzi+ea0pgj73el18Wm5mzv4OOJmbz8RDuWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//Z" alt="image"></p>
 <ul>
-<li>随着各种浏览器对css3属性支持度越来越改，其实真的很多样式动画的东西都可以纯前端来实现，今天我们就用部分不错的css3属性来制作天气预报。</li>
+<li>nuxt与next相似，但是nuxt是基于vue的，它为 客户端/服务端 这种典型的应用架构模式提供了许多有用的特性，例如异步数据加载、中间件支持、布局支持等。其实他的使用与vue基本相同，但是也有些不同和新增之处，下面是我自己学习时觉得需要常用的和基础来进行介绍，<a target="_blank" rel="noopener" href="https://github.com/bombHan/hello-nuxt">demo也有已经上传到我的github中了</a>，欢迎下载学习！过程中如果遇到不懂的或者不详细的可以参考<a target="_blank" rel="noopener" href="https://zh.nuxtjs.org/guide/installation">官网</a>解释。</li>
 </ul>
         
-          <a class="article-more-a" href="/2019/10/13/css%E4%B9%8B%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/#more">more >></a>
+          <a class="article-more-a" href="/2020/07/19/nuxt%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/#more">more >></a>
         
       
 
@@ -568,7 +489,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -578,7 +499,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/13/css%E4%B9%8B%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/07/19/nuxt%E7%9A%84%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/">展开全文 >></a>
         </p>
       
 
@@ -658,6 +579,85 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/10/13/css%D6%AEclip-path.md/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-css之天气预报" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/13/css%E4%B9%8B%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/">css 之 天气预报</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/13/css%E4%B9%8B%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/" class="archive-article-date">
+  	<time datetime="2019-10-13T07:44:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://github.com/bombHan/homework/blob/master/weatherDemo/weather.gif?raw=true" alt="image"></p>
+<ul>
+<li>随着各种浏览器对css3属性支持度越来越改，其实真的很多样式动画的东西都可以纯前端来实现，今天我们就用部分不错的css3属性来制作天气预报。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/10/13/css%E4%B9%8B%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/13/css%E4%B9%8B%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5/">展开全文 >></a>
         </p>
       
 
@@ -937,7 +937,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Han
+    		&copy; 2021 Han
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

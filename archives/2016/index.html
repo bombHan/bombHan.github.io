@@ -6,22 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>lodash的find,findLast,orderBy,groupBy,union,difference补充 | Han Blog</title>
+  <title>Archives: 2016 | Han Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天在代码里看到很多大佬都用了_.find，orderBy等函数，那么今天就再来补充一下这些常用的方法。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="lodash的find,findLast,orderBy,groupBy,union,difference补充">
-<meta property="og:url" content="http://yoursite.com/2018/07/09/lodash%E7%9A%84find%EF%BC%8CfindList%EF%BC%8CorderBy%EF%BC%8CgroupBy%20unionBy%20difference/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Han Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
 <meta property="og:site_name" content="Han Blog">
-<meta property="og:description" content="今天在代码里看到很多大佬都用了_.find，orderBy等函数，那么今天就再来补充一下这些常用的方法。">
 <meta property="og:locale">
-<meta property="og:image" content="http://lodash.think2011.net/images/logo.png">
-<meta property="article:published_time" content="2018-07-09T13:38:16.000Z">
-<meta property="article:modified_time" content="2018-07-09T13:38:16.000Z">
 <meta property="article:author" content="Han">
-<meta property="article:tag" content="lodash">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://lodash.think2011.net/images/logo.png">
   
     <link rel="alternative" href="/atom.xml" title="Han Blog" type="application/atom+xml">
   
@@ -153,255 +146,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-lodash的find，findList，orderBy，groupBy unionBy difference" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      lodash的find,findLast,orderBy,groupBy,union,difference补充
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/01/01/%E8%BF%91%E6%9C%9F%E8%A6%81%E7%82%B9%E7%A7%AF%E7%B4%AF/" class="archive-article-date">
+  	<time datetime="2015-12-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/01/01/%E8%BF%91%E6%9C%9F%E8%A6%81%E7%82%B9%E7%A7%AF%E7%B4%AF/">近期要点积累</a>
     </h1>
   
 
-        
-        <a href="/2018/07/09/lodash%E7%9A%84find%EF%BC%8CfindList%EF%BC%8CorderBy%EF%BC%8CgroupBy%20unionBy%20difference/" class="archive-article-date">
-  	<time datetime="2018-07-09T13:38:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://lodash.think2011.net/images/logo.png" alt="image"></p>
-<ul>
-<li>今天在代码里看到很多大佬都用了_.find，orderBy等函数，那么今天就再来补充一下这些常用的方法。</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="find"><a href="#find" class="headerlink" title="_.find"></a>_.find</h3><p><em>.find(collection, [predicate=</em>.identity], [fromIndex=0])首先是根据第三个参数得到搜索开始的起始位置，然后就是通过第二个参数搜索条件在第一个参数数组中寻找所需要的第一个元素。</p>
-<ul>
-<li>collection (Array|Object): 一个用来迭代的集合。</li>
-<li>[predicate=_.identity] (Array|Function|Object|string): 每次迭代调用的函数。</li>
-<li>[fromIndex=0] (number): 开始搜索的索引位置。</li>
-</ul>
-<p>例子如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> users = [</span><br><span class="line">  &#123; <span class="string">&#x27;user&#x27;</span>: <span class="string">&#x27;barney&#x27;</span>,  <span class="string">&#x27;age&#x27;</span>: <span class="number">36</span>, <span class="string">&#x27;active&#x27;</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  &#123; <span class="string">&#x27;user&#x27;</span>: <span class="string">&#x27;fred&#x27;</span>,    <span class="string">&#x27;age&#x27;</span>: <span class="number">40</span>, <span class="string">&#x27;active&#x27;</span>: <span class="literal">false</span> &#125;,</span><br><span class="line">  &#123; <span class="string">&#x27;user&#x27;</span>: <span class="string">&#x27;pebbles&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">1</span>,  <span class="string">&#x27;active&#x27;</span>: <span class="literal">true</span> &#125;</span><br><span class="line">];</span><br><span class="line"> </span><br><span class="line">_.find(users, <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123; <span class="keyword">return</span> o.age &lt; <span class="number">40</span>; &#125;);</span><br><span class="line"><span class="comment">// =&gt; object for &#x27;barney&#x27;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// The `_.matches` iteratee shorthand.</span></span><br><span class="line">_.find(users, &#123; <span class="string">&#x27;age&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;active&#x27;</span>: <span class="literal">true</span> &#125;);</span><br><span class="line"><span class="comment">// =&gt; object for &#x27;pebbles&#x27;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// The `_.matchesProperty` iteratee shorthand.</span></span><br><span class="line">_.find(users, [<span class="string">&#x27;active&#x27;</span>, <span class="literal">false</span>]);</span><br><span class="line"><span class="comment">// =&gt; object for &#x27;fred&#x27;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// The `_.property` iteratee shorthand.</span></span><br><span class="line">_.find(users, <span class="string">&#x27;active&#x27;</span>);</span><br><span class="line"><span class="comment">// =&gt; object for &#x27;barney&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="findLast"><a href="#findLast" class="headerlink" title="_.findLast"></a>_.findLast</h3><p><em>.findLast(collection, [predicate=</em>.identity], [fromIndex=collection.length-1])这个方法跟_.find方法一样但是他是从右至左遍历的，就是从最后往前寻找</p>
-<ul>
-<li>collection (Array|Object): 一个用来迭代的集合。</li>
-<li>[predicate=_.identity] (Array|Function|Object|string): 每次迭代调用的函数。</li>
-<li>[fromIndex=collection.length-1] (number): 开始搜索的索引位置。</li>
-</ul>
-<p>举例如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">_.findLast([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="function"><span class="keyword">function</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// =&gt; 3</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="orderBy"><a href="#orderBy" class="headerlink" title="_.orderBy"></a>_.orderBy</h3><p><em>.orderBy(collection, [iteratees=[</em>.identity]], [orders])<br>该方法有点类似于sortBy，除了它允许指定 iteratee（迭代函数）结果如何排序。 如果没指定 orders（排序），所有值以升序排序。 否则，指定为”desc” 降序，或者指定为 “asc” 升序，排序对应值。</p>
-<ul>
-<li>collection (Array|Object): 用来迭代的集合。</li>
-<li>[iteratees=[_.identity]] (Array[]|Function[]|Object[]|string[]): 排序的迭代函数。</li>
-<li>[orders] (string[]): iteratees迭代函数的排序顺序。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var users &#x3D; [</span><br><span class="line">  &#123; &#39;user&#39;: &#39;fred&#39;,   &#39;age&#39;: 48 &#125;,</span><br><span class="line">  &#123; &#39;user&#39;: &#39;barney&#39;, &#39;age&#39;: 34 &#125;,</span><br><span class="line">  &#123; &#39;user&#39;: &#39;fred&#39;,   &#39;age&#39;: 40 &#125;,</span><br><span class="line">  &#123; &#39;user&#39;: &#39;barney&#39;, &#39;age&#39;: 36 &#125;</span><br><span class="line">];</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F; 以 &#96;user&#96; 升序排序 再  &#96;age&#96; 以降序排序。</span><br><span class="line">_.orderBy(users, [&#39;user&#39;, &#39;age&#39;], [&#39;asc&#39;, &#39;desc&#39;]);</span><br><span class="line">&#x2F;&#x2F; &#x3D;&gt; objects for [[&#39;barney&#39;, 36], [&#39;barney&#39;, 34], [&#39;fred&#39;, 48], [&#39;fred&#39;, 40]]</span><br></pre></td></tr></table></figure>
-
-<h3 id="groupBy"><a href="#groupBy" class="headerlink" title="_.groupBy"></a>_.groupBy</h3><p><em>.groupBy(collection, [iteratee=</em>.identity])创建一个对象，key 是 iteratee 遍历 collection(集合) 中的每个元素返回的结果。 分组值的顺序是由他们出现在 collection(集合) 中的顺序确定的。每个键对应的值负责生成 key 的元素组成的数组。iteratee 调用 1 个参数： (value)。</p>
-<ul>
-<li>collection (Array|Object): 一个用来迭代的集合。</li>
-<li>[iteratee=_.identity] (Array|Function|Object|string): 这个迭代函数用来转换key。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">_.groupBy([<span class="number">6.1</span>, <span class="number">4.2</span>, <span class="number">6.3</span>], <span class="built_in">Math</span>.floor);</span><br><span class="line"><span class="comment">// =&gt; &#123; &#x27;4&#x27;: [4.2], &#x27;6&#x27;: [6.1, 6.3] &#125;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// The `_.property` iteratee shorthand.</span></span><br><span class="line">_.groupBy([<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>], <span class="string">&#x27;length&#x27;</span>);</span><br><span class="line"><span class="comment">// =&gt; &#123; &#x27;3&#x27;: [&#x27;one&#x27;, &#x27;two&#x27;], &#x27;5&#x27;: [&#x27;three&#x27;] &#125;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="unionBy"><a href="#unionBy" class="headerlink" title="_.unionBy"></a>_.unionBy</h3><p><em>.unionBy([arrays], [iteratee=</em>.identity])这个方法类似 _.union ，除了它接受一个 iteratee （迭代函数），调用每一个数组（array）的每个元素以产生唯一性计算的标准。iteratee 会传入一个参数：(value)。</p>
-<ul>
-<li>[arrays] (…Array): 要检查的数组。</li>
-<li>[iteratee=_.identity] (Array|Function|Object|string): 迭代函数，调用每个元素。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">_.unionBy([<span class="number">2.1</span>], [<span class="number">1.2</span>, <span class="number">2.3</span>], <span class="built_in">Math</span>.floor);</span><br><span class="line"><span class="comment">// =&gt; [2.1, 1.2]</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// The `_.property` iteratee shorthand.</span></span><br><span class="line">_.unionBy([&#123; <span class="string">&#x27;x&#x27;</span>: <span class="number">1</span> &#125;], [&#123; <span class="string">&#x27;x&#x27;</span>: <span class="number">2</span> &#125;, &#123; <span class="string">&#x27;x&#x27;</span>: <span class="number">1</span> &#125;], <span class="string">&#x27;x&#x27;</span>);</span><br><span class="line"><span class="comment">// =&gt; [&#123; &#x27;x&#x27;: 1 &#125;, &#123; &#x27;x&#x27;: 2 &#125;]</span></span><br><span class="line"></span><br><span class="line">_.unionBy([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>]);</span><br><span class="line"><span class="comment">// =&gt; [1,2,3,4,5]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="differenceBy"><a href="#differenceBy" class="headerlink" title="_.differenceBy"></a>_.differenceBy</h3><p><em>.differenceBy(array, [values], [iteratee=</em>.identity])这个方法类似_.difference ，除了它接受一个 iteratee （愚人码头注：迭代器）， 调用array 和 values 中的每个元素以产生比较的标准。 结果值是从第一数组中选择。iteratee 会调用一个参数：(value)。</p>
-<ul>
-<li>array (Array): 要检查的数组。</li>
-<li>[values] (…Array): 排除的值。</li>
-<li>[iteratee=_.identity] (Array|Function|Object|string): iteratee 调用每个元素。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">_.differenceBy([<span class="number">3.1</span>, <span class="number">2.2</span>, <span class="number">1.3</span>], [<span class="number">4.4</span>, <span class="number">2.5</span>], <span class="built_in">Math</span>.floor);</span><br><span class="line"><span class="comment">// =&gt; [3.1, 1.3]</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">// The `_.property` iteratee shorthand.</span></span><br><span class="line">_.differenceBy([&#123; <span class="string">&#x27;x&#x27;</span>: <span class="number">2</span> &#125;, &#123; <span class="string">&#x27;x&#x27;</span>: <span class="number">1</span> &#125;], [&#123; <span class="string">&#x27;x&#x27;</span>: <span class="number">1</span> &#125;], <span class="string">&#x27;x&#x27;</span>);</span><br><span class="line"><span class="comment">// =&gt; [&#123; &#x27;x&#x27;: 2 &#125;]</span></span><br><span class="line"></span><br><span class="line">_.differenceBy([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]);</span><br><span class="line"><span class="comment">//=&gt; [1]</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="map的拓展使用"><a href="#map的拓展使用" class="headerlink" title="_.map的拓展使用"></a>_.map的拓展使用</h3><p>他可以用来查找一个数据中每个元素的属性以及更深层的查找。<br>举例：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr=[&#123;</span><br><span class="line">           dog:<span class="string">&#x27;hh&#x27;</span>,</span><br><span class="line">           cats:[&#123;<span class="attr">name</span>:<span class="string">&#x27;cat1&#x27;</span>&#125;,&#123;<span class="attr">name</span>:<span class="string">&#x27;cat2&#x27;</span>&#125;]</span><br><span class="line">       &#125;,&#123;</span><br><span class="line">           dog:<span class="string">&#x27;ff&#x27;</span>,</span><br><span class="line">           cats:[&#123;<span class="attr">name</span>:<span class="string">&#x27;cat3&#x27;</span>&#125;,&#123;<span class="attr">name</span>:<span class="string">&#x27;cat4&#x27;</span>&#125;]</span><br><span class="line">       &#125;]</span><br><span class="line">       <span class="built_in">console</span>.log(_.map(arr,<span class="string">&#x27;dog&#x27;</span>),_.map(arr,<span class="string">&#x27;cats[1].name&#x27;</span>))</span><br><span class="line">   <span class="comment">//[&quot;hh&quot;, &quot;ff&quot;],[&quot;cat2&quot;, &quot;cat4&quot;]    </span></span><br><span class="line">       </span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的赞赏！<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">lodash</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/07/09/lodash%E7%9A%84find%EF%BC%8CfindList%EF%BC%8CorderBy%EF%BC%8CgroupBy%20unionBy%20difference/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/07/09/call%E5%92%8Capply%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%BC%82%E5%90%8C/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          call和apply使用方法和异同
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/06/22/flex%E5%B8%83%E5%B1%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">flex布局</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#find"><span class="toc-number">1.</span> <span class="toc-text">_.find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#findLast"><span class="toc-number">2.</span> <span class="toc-text">_.findLast</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#orderBy"><span class="toc-number">3.</span> <span class="toc-text">_.orderBy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#groupBy"><span class="toc-number">4.</span> <span class="toc-text">_.groupBy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unionBy"><span class="toc-number">5.</span> <span class="toc-text">_.unionBy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#differenceBy"><span class="toc-number">6.</span> <span class="toc-text">_.differenceBy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#map%E7%9A%84%E6%8B%93%E5%B1%95%E4%BD%BF%E7%94%A8"><span class="toc-number">7.</span> <span class="toc-text">_.map的拓展使用</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -424,8 +222,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
