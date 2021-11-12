@@ -6,23 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>vue-router的简单安装以及使用 | Han Blog</title>
+  <title>whistle深入浅出 | Han Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="vue-router的简单安装以及使用">
-<meta property="og:url" content="http://yoursite.com/2017/10/17/vue-router%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8/index.html">
+  <meta name="description" content="基于Node实现的跨平台web调试代理工具，类似的工具有Windows平台上的Fiddler，主要用于查看、修改HTTP、HTTPS、Websocket的请求、响应，也可以作为HTTP代理服务器使用，不同于Fiddler通过断点修改请求响应的方式，whistle采用的是类似配置系统hosts的方式，一切操作都可以通过配置实现，支持域名、路径、正则表达式、通配符、通配路径等多种匹配方式，且可以通过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="whistle深入浅出">
+<meta property="og:url" content="http://yoursite.com/2021/09/18/whistle%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/index.html">
 <meta property="og:site_name" content="Han Blog">
+<meta property="og:description" content="基于Node实现的跨平台web调试代理工具，类似的工具有Windows平台上的Fiddler，主要用于查看、修改HTTP、HTTPS、Websocket的请求、响应，也可以作为HTTP代理服务器使用，不同于Fiddler通过断点修改请求响应的方式，whistle采用的是类似配置系统hosts的方式，一切操作都可以通过配置实现，支持域名、路径、正则表达式、通配符、通配路径等多种匹配方式，且可以通过">
 <meta property="og:locale">
-<meta property="og:image" content="https://bombhan.github.io/homework/vuerouter%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/1.png">
-<meta property="og:image" content="https://bombhan.github.io/homework/vuerouter%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/2.png">
-<meta property="og:image" content="https://bombhan.github.io/homework/vuerouter%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/3.png">
-<meta property="og:image" content="https://bombhan.github.io/homework/vuerouter%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/4.png">
-<meta property="article:published_time" content="2017-10-17T05:43:14.000Z">
-<meta property="article:modified_time" content="2020-08-13T06:07:03.314Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/11450939/122700870-b0de4100-d27e-11eb-8d2a-46e352b49727.png">
+<meta property="og:image" content="http://wproxy.org/whistle/img/switchyomega.jpg">
+<meta property="og:image" content="http://wproxy.org/whistle/img/iOS-proxy-all.jpg">
+<meta property="og:image" content="http://wproxy.org/whistle/img/network.gif">
+<meta property="og:image" content="https://user-images.githubusercontent.com/11450939/122700926-ca7f8880-d27e-11eb-95ff-7c703d4152b5.png">
+<meta property="og:image" content="http://wproxy.org/whistle/img/composer.gif">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200414221254594.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTczMzYzOA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200414221427320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTczMzYzOA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200414221539376.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTczMzYzOA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200414221641283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTczMzYzOA==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-09-18T15:01:23.298Z">
+<meta property="article:modified_time" content="2021-09-18T15:01:23.731Z">
 <meta property="article:author" content="Han">
-<meta property="article:tag" content="vue">
+<meta property="article:tag" content="node">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://bombhan.github.io/homework/vuerouter%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/1.png">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/11450939/122700870-b0de4100-d27e-11eb-8d2a-46e352b49727.png">
   
     <link rel="alternative" href="/atom.xml" title="Han Blog" type="application/atom+xml">
   
@@ -154,44 +162,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vue-router的简单安装以及使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-whistle深入浅出" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      vue-router的简单安装以及使用
+      whistle深入浅出
     </h1>
   
 
         
-        <a href="/2017/10/17/vue-router%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2017-10-17T05:43:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
+        <a href="/2021/09/18/whistle%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/" class="archive-article-date">
+  	<time datetime="2021-09-18T15:01:23.298Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><a id="more"></a>
+        <p><img src="https://user-images.githubusercontent.com/11450939/122700870-b0de4100-d27e-11eb-8d2a-46e352b49727.png" alt="image"></p>
+<p>基于Node实现的跨平台web调试代理工具，类似的工具有Windows平台上的Fiddler，主要用于查看、修改HTTP、HTTPS、Websocket的请求、响应，也可以作为HTTP代理服务器使用，不同于Fiddler通过断点修改请求响应的方式，whistle采用的是类似配置系统hosts的方式，一切操作都可以通过配置实现，支持域名、路径、正则表达式、通配符、通配路径等多种匹配方式，且可以通过Node模块扩展功能</p>
+<a id="more"></a>
 
-
+<h3 id="1-安装启动"><a href="#1-安装启动" class="headerlink" title="1. 安装启动"></a>1. 安装启动</h3><ol>
+<li><p>安装Node</p>
+</li>
+<li><p>安装whistle（cmd模式下输入npm install whistle -g –registry=<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org即可)/">https://registry.npm.taobao.org即可）</a><br>注：安装后输入w2 help，验证是否安装成功，如果成功，则会出现 -V, –version </p>
+</li>
+<li><p>在cmd模式下执行w2 start即可启动</p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="http://wproxy.org/whistle/install.html">官方参考链接</a></p>
+<h3 id="2-web端和手机端代理配置"><a href="#2-web端和手机端代理配置" class="headerlink" title="2.web端和手机端代理配置"></a>2.web端和手机端代理配置</h3><ol>
+<li>配置信息：</li>
+</ol>
+<ul>
+<li>代理服务器：127.0.0.1 (如果部署在远程服务器或虚拟机上，改成对应服务器或虚拟机的ip即可)</li>
+<li>默认端口：8899 (如果端口被占用，可以在启动时通过 -p 来指定新的端口，更多信息可以通过执行命令行 w2 help (v0.7.0及以上版本也可以使用w2 help) 查看)</li>
+</ul>
+<ol start="2">
+<li>web端代理配置</li>
+</ol>
+<p>安装Chrome代理插件：推荐安装SwitchyOmega，用上面的配置信息填写红圈中的内容<br><img src="http://wproxy.org/whistle/img/switchyomega.jpg" alt="image"></p>
+<ol start="3">
+<li>移动端代理配置<br>移动端需要在设置中配置当前Wi-Fi的代理，以 iOS 为例<br><img src="http://wproxy.org/whistle/img/iOS-proxy-all.jpg" alt="image"><br>PS: 如果配置完代理，手机无法访问，可能是whistle所在的电脑防火墙限制了远程访问whistle的端口，关闭防火墙或者设置白名单：<a target="_blank" rel="noopener" href="http://jingyan.baidu.com/article/870c6fc317cae7b03ee4be48.html">http://jingyan.baidu.com/article/870c6fc317cae7b03ee4be48.html</a></li>
+</ol>
+<h3 id="3-安装根证书"><a href="#3-安装根证书" class="headerlink" title="3. 安装根证书"></a>3. 安装根证书</h3><p>安装证书请参考文档:<a target="_blank" rel="noopener" href="http://wproxy.org/whistle/webui/https.html">http://wproxy.org/whistle/webui/https.html</a></p>
+<h3 id="4-常用使用简介"><a href="#4-常用使用简介" class="headerlink" title="4. 常用使用简介"></a>4. 常用使用简介</h3><p>具体全部使用可参考官方文档：<a target="_blank" rel="noopener" href="http://wproxy.org/whistle/webui/values.html">http://wproxy.org/whistle/webui/values.html</a></p>
+<ol>
+<li><p>更强大的network功能<br>当web端或者手机端开启代理后，所有请求都可在当前页面被查看，主要便于查看手机的请求接口内容。<br><img src="http://wproxy.org/whistle/img/network.gif" alt="image"><br>参考图如下：<br><img src="https://user-images.githubusercontent.com/11450939/122700926-ca7f8880-d27e-11eb-95ff-7c703d4152b5.png" alt="image"></p>
+</li>
+<li><p>Componser<br>用来重发请求、构造请求，可以自定义请求的url、请求方法、请求头、请求内容。<br><img src="http://wproxy.org/whistle/img/composer.gif" alt="image"></p>
+</li>
+<li><p>rules和value劫持接口替换接口返回值并返回<br>这是主要工能之一（他不仅可以实现接口的替换，还可以实现接口数据的mock，功能强于mock.js）</p>
+</li>
+</ol>
+<ul>
+<li>首先在rules中创建一个文件并填写对应的规则替换内容，例如如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 这个操作就是所有匹配下面路径的请求，返回的内容都会被menus.json代替</span><br><span class="line">^plug&#x2F;api&#x2F;nav&#x2F;menus.htm file:&#x2F;&#x2F;&#123;menus.json&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后在value中创建menus.json文件，那么网页上所有链接都会被其内容替换</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;data&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;categoryNo&quot;</span>: <span class="string">&quot;number&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;categoryVersion&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">      <span class="attr">&quot;companyId&quot;</span>: <span class="number">10</span>,</span><br><span class="line">      <span class="attr">&quot;projectId&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">      <span class="attr">&quot;categoryName&quot;</span>: <span class="string">&quot;阿数据中心111&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;orderNum&quot;</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="attr">&quot;categoryLogo&quot;</span>: <span class="string">&quot;ad6600f5-a124-2c92-f988-001260101a38&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;categoryId&quot;</span>: <span class="number">801343943</span>,</span><br><span class="line">      <span class="attr">&quot;categoryUrl&quot;</span>: <span class="string">&quot;/console/project/#/projectManage/library&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;frontUrl&quot;</span>: <span class="string">&quot;projectManage&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;categoryNo&quot;</span>: <span class="string">&quot;aaa&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;categoryVersion&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">      <span class="attr">&quot;companyId&quot;</span>: <span class="number">10</span>,</span><br><span class="line">      <span class="attr">&quot;projectId&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">      <span class="attr">&quot;categoryName&quot;</span>: <span class="string">&quot;新闻公告111&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;orderNum&quot;</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="attr">&quot;categoryLogo&quot;</span>: <span class="string">&quot;ac6f010f-506b-2c92-9094-09066495d94b&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;categoryId&quot;</span>: <span class="number">21</span>,</span><br><span class="line">      <span class="attr">&quot;categoryUrl&quot;</span>: <span class="string">&quot;/console/oa/#/notice1&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;frontUrl&quot;</span>: <span class="string">&quot;oa&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>手机端和web端都可以注入js代码片段<br>（主要可以用于给手机端注入vconsole便于调试手机端接口以及报错等）</li>
+</ol>
+<ul>
+<li><p>存放资源(注：vconsole的源码可在github上下载)<br><img src="https://img-blog.csdnimg.cn/20200414221254594.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTczMzYzOA==,size_16,color_FFFFFF,t_70" alt="image"></p>
+</li>
+<li><p>第二步：引入资源<br><img src="https://img-blog.csdnimg.cn/20200414221427320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTczMzYzOA==,size_16,color_FFFFFF,t_70" alt="image"></p>
+</li>
+<li><p>手机网页版查看<br><img src="https://img-blog.csdnimg.cn/20200414221539376.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTczMzYzOA==,size_16,color_FFFFFF,t_70" alt="image"></p>
+</li>
+<li><p>代理服务器的log中也可查看<br><img src="https://img-blog.csdnimg.cn/20200414221641283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTczMzYzOA==,size_16,color_FFFFFF,t_70" alt="image"><br>教学链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/github_39733638/article/details/105522651">https://blog.csdn.net/github_39733638/article/details/105522651</a></p>
 </li>
 </ul>
-<h3 id="1、vue-router的安装"><a href="#1、vue-router的安装" class="headerlink" title="1、vue-router的安装"></a>1、vue-router的安装</h3><p> 在生成的vue工程项目中打开命令窗口在命令行中输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install vue-router --save</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="2、在main-js文件中引入如下代码"><a href="#2、在main-js文件中引入如下代码" class="headerlink" title="2、在main.js文件中引入如下代码"></a>2、在main.js文件中引入如下代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import VueRouter from &#39;vue-router&#39;</span><br><span class="line">import routes from &#39;.&#x2F;router&#x2F;index&#39;</span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br><span class="line"></span><br><span class="line">const router&#x3D;new VueRouter(&#123;</span><br><span class="line">    routes</span><br><span class="line">&#125;)</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &#39;#app&#39;,</span><br><span class="line">  router,</span><br><span class="line">  store,</span><br><span class="line">  template: &#39;&lt;App&#x2F;&gt;&#39;,</span><br><span class="line">  components: &#123; App &#125;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="3、在index文件中引入如下代码"><a href="#3、在index文件中引入如下代码" class="headerlink" title="3、在index文件中引入如下代码"></a>3、在index文件中引入如下代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">export default [</span><br><span class="line">  &#123;</span><br><span class="line">      path:&#39;&#x2F;&#39;,</span><br><span class="line">      name:&#39;lookChild&#39;,</span><br><span class="line">      component:&#123;</span><br><span class="line">          template:&#96;&lt;div&gt;&lt;router-link to&#x3D;&#39;&#x2F;a&#39;&gt;查看子路由(这是在router-view中的内容)&lt;&#x2F;router-link&gt;&lt;router-view&gt;&lt;&#x2F;router-view&gt;&lt;&#x2F;div&gt;&#96;</span><br><span class="line">      &#125;,</span><br><span class="line">      children:[   &#x2F;&#x2F;子路由</span><br><span class="line">        &#123;</span><br><span class="line">            path:&#39;a&#39;,</span><br><span class="line">            component:&#123;</span><br><span class="line">                template:&#96;&lt;div&gt;这是子路由详情&lt;br&gt;&lt;router-link to&#x3D;&#39;&#x2F;&#39;&gt;返回&lt;&#x2F;router-link&gt;&lt;&#x2F;div&gt;&#96;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">          ]</span><br><span class="line">      &#125;]</span><br></pre></td></tr></table></figure>
-
-<h3 id="4、在主页面APP-vue中引入如下代码即可"><a href="#4、在主页面APP-vue中引入如下代码即可" class="headerlink" title="4、在主页面APP.vue中引入如下代码即可"></a>4、在主页面APP.vue中引入如下代码即可</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">&lt;router-link :to&#x3D;&quot;&#123;name:&#39;people&#39;,params:&#123;name&#125;&#125;&quot;&gt;1、查看姓名详情&lt;&#x2F;router-link&gt;</span><br><span class="line">&lt;router-view&gt;&lt;&#x2F;router-view&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">    data()&#123;</span><br><span class="line">        return&#123;</span><br><span class="line">             name: &#39;myname&#39;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="5、具体实例如下"><a href="#5、具体实例如下" class="headerlink" title="5、具体实例如下"></a>5、具体实例如下</h3><p>此实例中运用了vue-router以及vuex</p>
-<p><img src="https://bombhan.github.io/homework/vuerouter%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/1.png" alt="image"><br><img src="https://bombhan.github.io/homework/vuerouter%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/2.png" alt="image"><br><img src="https://bombhan.github.io/homework/vuerouter%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/3.png" alt="image"><br><img src="https://bombhan.github.io/homework/vuerouter%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/4.png" alt="image"></p>
-<p>最终实现的效果如下:<a target="_blank" rel="noopener" href="https://bombhan.github.io/homework/vuerouter%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/index">链接可见</a></p>
+<h3 id="5-更多扩展功能"><a href="#5-更多扩展功能" class="headerlink" title="5.更多扩展功能"></a>5.更多扩展功能</h3><p>详情可见以下链接：<a target="_blank" rel="noopener" href="http://wproxy.org/whistle/webui/">http://wproxy.org/whistle/webui/</a></p>
 
       
 
@@ -231,7 +280,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
         		</li>
       		
 		</ul>
@@ -287,7 +336,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/17/vue-router%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2021/09/18/whistle%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -301,18 +350,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/10/19/Javascript%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Javascript中常见的一些算法问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/16/Vuex%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Vuex的简单安装以及使用</div>
+    <a href="/2021/04/25/%E8%BF%91%E6%9C%9F%E8%A6%81%E7%82%B9%E7%A7%AF%E7%B4%AF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">近期要点积累</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -339,7 +379,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81vue-router%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">1、vue-router的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%9C%A8main-js%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BC%95%E5%85%A5%E5%A6%82%E4%B8%8B%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">2、在main.js文件中引入如下代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%9C%A8index%E6%96%87%E4%BB%B6%E4%B8%AD%E5%BC%95%E5%85%A5%E5%A6%82%E4%B8%8B%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">3、在index文件中引入如下代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%9C%A8%E4%B8%BB%E9%A1%B5%E9%9D%A2APP-vue%E4%B8%AD%E5%BC%95%E5%85%A5%E5%A6%82%E4%B8%8B%E4%BB%A3%E7%A0%81%E5%8D%B3%E5%8F%AF"><span class="toc-number">4.</span> <span class="toc-text">4、在主页面APP.vue中引入如下代码即可</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%85%B7%E4%BD%93%E5%AE%9E%E4%BE%8B%E5%A6%82%E4%B8%8B"><span class="toc-number">5.</span> <span class="toc-text">5、具体实例如下</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E5%90%AF%E5%8A%A8"><span class="toc-number">1.</span> <span class="toc-text">1. 安装启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-web%E7%AB%AF%E5%92%8C%E6%89%8B%E6%9C%BA%E7%AB%AF%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">2.web端和手机端代理配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85%E6%A0%B9%E8%AF%81%E4%B9%A6"><span class="toc-number">3.</span> <span class="toc-text">3. 安装根证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B8%B8%E7%94%A8%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B"><span class="toc-number">4.</span> <span class="toc-text">4. 常用使用简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%9B%B4%E5%A4%9A%E6%89%A9%E5%B1%95%E5%8A%9F%E8%83%BD"><span class="toc-number">5.</span> <span class="toc-text">5.更多扩展功能</span></a></li></ol>
                     </div>
                 </span>
             </div>
