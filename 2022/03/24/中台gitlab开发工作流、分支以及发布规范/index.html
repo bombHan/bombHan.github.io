@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Han Blog</title>
+  <title>中台gitlab开发工作流、分支以及发布规范 | Han Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Han Blog">
-<meta property="og:url" content="http://yoursite.com/page/5/index.html">
+  <meta name="description" content="中台的开发工作流需要规范，现在的分支五花八门，并且跟Jenkins无法配合使用，现在需要提升工作效率以及工作规范，制定以下规范">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中台gitlab开发工作流、分支以及发布规范">
+<meta property="og:url" content="http://yoursite.com/2022/03/24/%E4%B8%AD%E5%8F%B0gitlab%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%B5%81%E3%80%81%E5%88%86%E6%94%AF%E4%BB%A5%E5%8F%8A%E5%8F%91%E5%B8%83%E8%A7%84%E8%8C%83/index.html">
 <meta property="og:site_name" content="Han Blog">
+<meta property="og:description" content="中台的开发工作流需要规范，现在的分支五花八门，并且跟Jenkins无法配合使用，现在需要提升工作效率以及工作规范，制定以下规范">
 <meta property="og:locale">
+<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.itdaan.com%2Fi%2F5ec0a03574b3938b4146d65fcfda523b2.jpg&refer=http%3A%2F%2Fwww.itdaan.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650682439&t=4e3020bed7119fac69bd61136275ff8a">
+<meta property="og:image" content="https://gitee.com/han_sheng_hao/source/raw/master/gitflow.png">
+<meta property="article:published_time" content="2022-03-24T03:17:12.100Z">
+<meta property="article:modified_time" content="2022-03-24T03:17:12.103Z">
 <meta property="article:author" content="Han">
+<meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.itdaan.com%2Fi%2F5ec0a03574b3938b4146d65fcfda523b2.jpg&refer=http%3A%2F%2Fwww.itdaan.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650682439&t=4e3020bed7119fac69bd61136275ff8a">
   
     <link rel="alternative" href="/atom.xml" title="Han Blog" type="application/atom+xml">
   
@@ -146,36 +154,89 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-less在vue项目中的使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-中台gitlab开发工作流、分支以及发布规范" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/08/less%E5%9C%A8vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/">less在vue项目中的使用</a>
+    <h1 class="article-title" itemprop="name">
+      中台gitlab开发工作流、分支以及发布规范
     </h1>
   
 
         
-        <a href="/2017/12/08/less%E5%9C%A8vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2017-12-08T09:42:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-08</time>
+        <a href="/2022/03/24/%E4%B8%AD%E5%8F%B0gitlab%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%B5%81%E3%80%81%E5%88%86%E6%94%AF%E4%BB%A5%E5%8F%8A%E5%8F%91%E5%B8%83%E8%A7%84%E8%8C%83/" class="archive-article-date">
+  	<time datetime="2022-03-24T03:17:12.100Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。<br>Less 可以运行在 Node 或浏览器端。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/12/08/less%E5%9C%A8vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/#more">more >></a>
-        
+        <p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.itdaan.com%2Fi%2F5ec0a03574b3938b4146d65fcfda523b2.jpg&refer=http%3A%2F%2Fwww.itdaan.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650682439&t=4e3020bed7119fac69bd61136275ff8a" alt="image"></p>
+<p>中台的开发工作流需要规范，现在的分支五花八门，并且跟Jenkins无法配合使用，现在需要提升工作效率以及工作规范，制定以下规范</p>
+<a id="more"></a>
+
+
+<h2 id="1、正常迭代规范"><a href="#1、正常迭代规范" class="headerlink" title="1、正常迭代规范"></a>1、正常迭代规范</h2><h3 id="一、分支创建"><a href="#一、分支创建" class="headerlink" title="一、分支创建"></a>一、分支创建</h3><p>1、主分支（勿动）</p>
+<pre><code>master分支为线上代码分支</code></pre>
+<p>2、每月迭代分支</p>
+<pre><code>从最新的master分支上，切出当前月份分支为当月的分支（例如2021年12月：2021.12）</code></pre>
+<p>3、迭代中需求分支(feat)</p>
+<pre><code>当月的每个需求需要基于当前月份的分支，切出对应需求分支再进行开发（例如2021年12月有个新增人员需求：2021.12-feat-addStaff）</code></pre>
+<p>4、迭代中独立的bug分支(fix)</p>
+<pre><code>当月有独立的bug，也需要基于当月分支，切出对应的bug修复分支进行修复（例如2021年12月有个组织管理的bug：2021.12-fix-organizationManagement）</code></pre>
+<h3 id="二、commit提交规范"><a href="#二、commit提交规范" class="headerlink" title="二、commit提交规范"></a>二、commit提交规范</h3><p>1、bug提交格式：”fix:</p>
+<pre><code>jira中的bug号+部分bug描述&quot;</code></pre>
+<p>2、需求feat提交格式： “feat: </p>
+<pre><code>jira中的需求任务号+对应任务描述&quot;</code></pre>
+<h3 id="三、分支合并规范"><a href="#三、分支合并规范" class="headerlink" title="三、分支合并规范"></a>三、分支合并规范</h3><p>1、feat分支开发完或者其中bug修复完成</p>
+<pre><code>需要合到当月分支：在gitlab上提一个merge request分支合并请求给上级（例如2021.12-feat-a分支开发完，那就将其发起合并请求到2021.12分支上）</code></pre>
+<p>2、bug分支修复完成</p>
+<pre><code>同上1中所属</code></pre>
+<p>3、特殊情况</p>
+<pre><code>现在每月分上半月和下半月两次发布，可能有部分需求会delay不发布或者有不一定发布的需求，那么该需求feat分支不能合并到当前月份分支上，待确定后再合并至当月分支提测。</code></pre>
+<h3 id="四、分支部署提测"><a href="#四、分支部署提测" class="headerlink" title="四、分支部署提测"></a>四、分支部署提测</h3><p>1、常规情况：</p>
+<pre><code>当开发完成feature或者bug后合到当月分支后，需要去部署一下最新的当月分支</code></pre>
+<p>2、特殊情况：</p>
+<pre><code>如果某个feature当前不需要发布，但是又需要提测，则直接拉取当月分支最新代码至当前分支，然后部署当前分支</code></pre>
+<h3 id="五、-发布分支合并"><a href="#五、-发布分支合并" class="headerlink" title="五、 发布分支合并"></a>五、 发布分支合并</h3><p>最后当预发环境全都测试完毕当前月份分支无问题后，需要在master分支上打一个当日的tag（例如：2021.12.23），然后将当月分支合并至master分支上进行发布</p>
+<h2 id="2、临时线上问题修复"><a href="#2、临时线上问题修复" class="headerlink" title="2、临时线上问题修复"></a>2、临时线上问题修复</h2><h3 id="一、分支创建-1"><a href="#一、分支创建-1" class="headerlink" title="一、分支创建"></a>一、分支创建</h3><pre><code>直接基于master分支切出当月修复线上的分支（例如2021年12月的临时线上修复问题分支：2021.12-bugfix）</code></pre>
+<h3 id="二、commit提交规范-1"><a href="#二、commit提交规范-1" class="headerlink" title="二、commit提交规范"></a>二、commit提交规范</h3><pre><code>bug提交格式：&quot;fix: jira中的bug号+部分bug描述&quot;</code></pre>
+<h3 id="三、部署提测"><a href="#三、部署提测" class="headerlink" title="三、部署提测"></a>三、部署提测</h3><pre><code>直接部署当前修复分支至测试环境或者预发环境</code></pre>
+<h3 id="四、发布分支合并"><a href="#四、发布分支合并" class="headerlink" title="四、发布分支合并"></a>四、发布分支合并</h3><pre><code>最后当预发环境测试完毕无问题后，需要在master分支上打一个当日的tag（例如：2021.12.23），然后将临时修复分支合并至master分支上进行发布</code></pre>
+<h2 id="3、发布流程图"><a href="#3、发布流程图" class="headerlink" title="3、发布流程图"></a>3、发布流程图</h2><p><img src="https://gitee.com/han_sheng_hao/source/raw/master/gitflow.png" alt="https://gitee.com/han_sheng_hao/source/raw/master/gitflow.png"></p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/han_sheng_hao/source/raw/master/gitflow.png">若图片无法预览可点击此链接</a></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的赞赏！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -186,7 +247,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
@@ -195,16 +256,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/08/less%E5%9C%A8vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2022/03/24/%E4%B8%AD%E5%8F%B0gitlab%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%B5%81%E3%80%81%E5%88%86%E6%94%AF%E4%BB%A5%E5%8F%8A%E5%8F%91%E5%B8%83%E8%A7%84%E8%8C%83/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2022/03/24/ahooks/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ahooks常用hook</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -219,717 +339,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-cui-cli脚手架使用学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/cui-cli%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">cui-cli脚手架使用</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/07/cui-cli%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2017-12-07T10:45:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>主要作用：目录结构、本地调试、代码部署、热加载、单元测试，可参考vue-cli<br>适用范围：税友内部前端项目<br>开发作者：傅正廉<br>地址：<a target="_blank" rel="noopener" href="https://npm.taobao.org/package/cui-cli">https://npm.taobao.org/package/cui-cli</a></li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/12/07/cui-cli%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/07/cui-cli%E8%84%9A%E6%89%8B%E6%9E%B6%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%AD%A3%E5%B8%B8%E8%BF%AD%E4%BB%A3%E8%A7%84%E8%8C%83"><span class="toc-number">1.</span> <span class="toc-text">1、正常迭代规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%88%86%E6%94%AF%E5%88%9B%E5%BB%BA"><span class="toc-number">1.1.</span> <span class="toc-text">一、分支创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81commit%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83"><span class="toc-number">1.2.</span> <span class="toc-text">二、commit提交规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6%E8%A7%84%E8%8C%83"><span class="toc-number">1.3.</span> <span class="toc-text">三、分支合并规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%86%E6%94%AF%E9%83%A8%E7%BD%B2%E6%8F%90%E6%B5%8B"><span class="toc-number">1.4.</span> <span class="toc-text">四、分支部署提测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81-%E5%8F%91%E5%B8%83%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6"><span class="toc-number">1.5.</span> <span class="toc-text">五、 发布分支合并</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E4%B8%B4%E6%97%B6%E7%BA%BF%E4%B8%8A%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D"><span class="toc-number">2.</span> <span class="toc-text">2、临时线上问题修复</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%88%86%E6%94%AF%E5%88%9B%E5%BB%BA-1"><span class="toc-number">2.1.</span> <span class="toc-text">一、分支创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81commit%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83-1"><span class="toc-number">2.2.</span> <span class="toc-text">二、commit提交规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%83%A8%E7%BD%B2%E6%8F%90%E6%B5%8B"><span class="toc-number">2.3.</span> <span class="toc-text">三、部署提测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8F%91%E5%B8%83%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6"><span class="toc-number">2.4.</span> <span class="toc-text">四、发布分支合并</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">3.</span> <span class="toc-text">3、发布流程图</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-vue重新入门学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/vue%E9%87%8D%E6%96%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/">vue重新入门学习</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/07/vue%E9%87%8D%E6%96%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2017-12-07T10:45:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。<br>Vue 只关注视图层， 采用自底向上增量开发的设计。<br>Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/12/07/vue%E9%87%8D%E6%96%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/12/07/vue%E9%87%8D%E6%96%B0%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css常用属性易错易忘点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/21/css%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E6%98%93%E9%94%99%E6%98%93%E5%BF%98%E7%82%B9/">css常用属性的记录</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/21/css%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E6%98%93%E9%94%99%E6%98%93%E5%BF%98%E7%82%B9/" class="archive-article-date">
-  	<time datetime="2017-11-21T06:40:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>css常用属性知识点有很多，例如如何上下居中，超出文字如何省略，文字如何环绕图片等等这些方法以及属性在本篇博客中都有详细写明。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/11/21/css%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E6%98%93%E9%94%99%E6%98%93%E5%BF%98%E7%82%B9/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/21/css%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7%E6%98%93%E9%94%99%E6%98%93%E5%BF%98%E7%82%B9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-redux指南" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/17/redux%E6%8C%87%E5%8D%97/">redux</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/17/redux%E6%8C%87%E5%8D%97/" class="archive-article-date">
-  	<time datetime="2017-11-17T06:38:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>首先明确一点，Redux 是一个有用的架构，但不是非用不可。事实上，大多数情况，你可以不用它，只用 React 就够了。曾经有人说过这样一句话。”如果你不知道是否需要 Redux，那就是不需要它。”Redux 的创造者 Dan Abramov 又补充了一句。”只有遇到 React 实在解决不了的问题，你才需要 Redux 。”简单说，如果你的UI层非常简单，没有很多互动，Redux 就是不必要的，用了反而增加复杂性。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/11/17/redux%E6%8C%87%E5%8D%97/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/17/redux%E6%8C%87%E5%8D%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-react-router的简单用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/15/react-router%E7%9A%84%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95/">react-router的简单用法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/15/react-router%E7%9A%84%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2017-11-15T02:06:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>路由库React-Router。它是官方维护的，事实上也是唯一可选的路由库。它通过管理 URL，实现组件的切换和状态的变化，开发复杂的应用几乎肯定会用到。 </li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/11/15/react-router%E7%9A%84%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/15/react-router%E7%9A%84%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-DOM0,DOM2,DOM3事件,事件基础知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/14/DOM0,DOM2,DOM3%E4%BA%8B%E4%BB%B6,%E4%BA%8B%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">DOM0,DOM2,DOM3事件,事件基础知识入门</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/14/DOM0,DOM2,DOM3%E4%BA%8B%E4%BB%B6,%E4%BA%8B%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
-  	<time datetime="2017-11-14T02:46:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>事件是javascript和HTML交互基础, 任何文档或者浏览器窗口发生的交互, 都要通过绑定事件进行交互;事件有DOM0, DOM2和DOM3的区分。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/11/14/DOM0,DOM2,DOM3%E4%BA%8B%E4%BB%B6,%E4%BA%8B%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/14/DOM0,DOM2,DOM3%E4%BA%8B%E4%BB%B6,%E4%BA%8B%E4%BB%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sassѧϰ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/27/sass%D1%A7%CF%B0/">sass学习</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/27/sass%D1%A7%CF%B0/" class="archive-article-date">
-  	<time datetime="2017-10-27T09:07:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li></li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/10/27/sass%D1%A7%CF%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">sass</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/27/sass%D1%A7%CF%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-React基础学习小问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/24/React%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E5%B0%8F%E9%97%AE%E9%A2%98/">Reacts基础学习重点问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/24/React%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E5%B0%8F%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2017-10-24T09:08:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>
-        
-          <a class="article-more-a" href="/2017/10/24/React%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E5%B0%8F%E9%97%AE%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">React</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/24/React%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E5%B0%8F%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Javascript中一些常见的算法问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/19/Javascript%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/">Javascript中常见的一些算法问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/19/Javascript%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2017-10-19T11:26:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>
-        
-          <a class="article-more-a" href="/2017/10/19/Javascript%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/19/Javascript%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -952,8 +387,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
